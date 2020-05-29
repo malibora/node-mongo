@@ -33,7 +33,7 @@ services:
   mongo-express:
     image: mongo-express
     restart: unless-stopped
-    depends_on:
+    links:
       - mongo
     environment: 
       - ME_CONFIG_MONGODB_SERVER= mongo
