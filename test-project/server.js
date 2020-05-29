@@ -14,7 +14,7 @@ const MONGO_URL = 'mongodb://mongo:27017';
 const DB_NAME = 'test-project';
 const HOST = '0.0.0.0';
 
-(async function() {
+(async ()=> {
 	// Use connect to mongo server
 	const client = new MongoClient(MONGO_URL, { useNewUrlParser: true });
 	await client.connect();

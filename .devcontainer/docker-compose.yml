@@ -29,4 +29,14 @@ services:
     restart: unless-stopped
     volumes:
       - /data/db
+
+  mongo-express:
+    image: mongo-express
+    restart: unless-stopped
+    depends_on:
+      - mongo
+    environment: 
+      - ME_CONFIG_MONGODB_SERVER= some-mongo
+    ports: 
+      - 8081:8081
  
